@@ -1,13 +1,29 @@
+player.onChat("?spawn", function () {
+    player.teleport(pos(0, 0, 0))
+})
 player.onChat("?Help", function () {
     player.say("---------Commands 1/1 ---------")
-    player.say("§l3?expstick \"Username\" ----- Gives Exp Stick ")
-    player.say(":)")
-    player.say(":)")
-    player.say(":)")
+    player.say("§l3?expstick ----- Gives Exp Stick ")
+    player.say("§l3?Spawn ----- Tps You To Spawn")
+    player.say("§l3?PA ------ Tps You To PVP Area")
+    player.say("§l3?PvpO ----- Pvp On")
+    player.say("§l3?PvpOF ----- Pvp Off")
+})
+player.onChat("?expstick", function () {
+    player.runChatCommand("/give @s Golden_shovel")
+})
+player.onChat("?Pvp0f", function () {
+    gameplay.setGameRule(PV_P, false)
+})
+player.onChat("?PA", function () {
+    player.teleport(pos(0, 0, 0))
 })
 player.onItemInteracted(GOLDEN_SHOVEL, function () {
     gameplay.xp(10, mobs.target(LOCAL_PLAYER))
     player.say("Exp Stick Used")
+})
+player.onChat("?Pvp0", function () {
+    gameplay.setGameRule(PV_P, true)
 })
 player.say("§3Server Commands Loading")
 player.say("§3Server Commands Loading")
