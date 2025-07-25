@@ -1,0 +1,15 @@
+player.onChat("?Help", function () {
+    player.say("---------Commands 1/1 ---------")
+    player.say("§l3?expstick \"Username\" ----- Gives Exp Stick ")
+    player.say(":)")
+    player.say(":)")
+    player.say(":)")
+})
+player.onItemInteracted(GOLDEN_SHOVEL, function () {
+    gameplay.xp(10, mobs.target(LOCAL_PLAYER))
+    player.say("Exp Stick Used")
+})
+player.say("§3Server Commands Loading")
+player.say("§3Server Commands Loading")
+player.say("§3Server Commands Loaded")
+player.say("§3Say ?Help For Command List")
